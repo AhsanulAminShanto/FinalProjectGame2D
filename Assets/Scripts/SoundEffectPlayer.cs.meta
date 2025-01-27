@@ -3,7 +3,14 @@ guid: 5b544c633a426d547aa01d0a6b4dbf2d
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - correctSound: {fileID: 8300000, guid: 4907bbd4b6d68384b9743325808388b7, type: 3}
+  - wrongMatchSound: {fileID: 8300000, guid: bc24f2fb40127bf4e8db800fd71a68a9, type: 3}
+  - gameLostSound: {fileID: 8300000, guid: ba1f89ca8543d0642b84d816ede353b2, type: 3}
+  - levelUpSound: {fileID: 8300000, guid: 63e198848b6106a4abbceb9cc577eb63, type: 3}
+  - buttonClickSound: {fileID: 8300000, guid: f46a3507068c70741bd0693892193cdf, type: 3}
+  - menuBackgroundMusic: {fileID: 8300000, guid: 3ec06f84c46b3744cb1205bdbb5fb5ca,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

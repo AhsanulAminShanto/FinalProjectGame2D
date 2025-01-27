@@ -90,6 +90,7 @@ public class QuizManager : MonoBehaviour
 
     public void ResetQuestion()
     {
+        SoundEffectPlayer.instance.PlayButtonClickSound();
         for (int i = 0; i < answerWordList.Length; i++)
         {
             if (i < answerWord.Length)
@@ -113,6 +114,7 @@ public class QuizManager : MonoBehaviour
 
     public void SelectedOption(WordData value)
     {
+        SoundEffectPlayer.instance.PlayButtonClickSound();
         if (gameStatus == GameStatus.Next || currentAnswerIndex >= answerWord.Length) return;
 
         selectedWordsIndex.Add(value.transform.GetSiblingIndex());
@@ -147,6 +149,7 @@ public class QuizManager : MonoBehaviour
             else
             {
                 Debug.Log("Incorrect Answer");
+                SoundEffectPlayer.instance.PlayWrongMatchSound();
                 ResetQuestion();
             }
         }
@@ -165,6 +168,7 @@ private void HidelevelU()
 
     public void ResetLastWord()
     {
+        SoundEffectPlayer.instance.PlayButtonClickSound();
         if (selectedWordsIndex.Count > 0)
         {
             int index = selectedWordsIndex[selectedWordsIndex.Count - 1];
@@ -220,6 +224,7 @@ private void HidelevelU()
 }*/
 public void ResetClickedLetter(int answerIndex)
 {
+    SoundEffectPlayer.instance.PlayButtonClickSound();
     // Check if the passed parameter is 3
     if (answerIndex == 3)
     {
